@@ -1,0 +1,46 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/**
+ * @title TempleZero
+ * @dev Smart Contract manifeste pour un lieu vivant, évolutif et transparent.
+ * Ce contrat reconnaît une maison comme un actif vivant, témoin d’un engagement humain,
+ * et propose un cadre de transparence, de croissance cohérente, et de co-participation.
+ */
+
+contract TempleZero {
+    address public fondatrice;
+    string public maison;
+    uint256 public dateOrigine;
+    string public manifeste;
+    mapping(address => bool) public membres;
+    
+    event NouvelleAdhesion(address membre);
+    event MiseAJourManifeste(string nouveauManifeste);
+
+    constructor(string memory _adresseMaison) {
+        fondatrice = msg.sender;
+        maison = _adresseMaison;
+        dateOrigine = block.timestamp;
+        manifeste = "Transparence. Cohérence. Humanité. La maison est un sanctuaire vivant.";
+    }
+
+    modifier seulementFondatrice() {
+        require(msg.sender == fondatrice, "Tu n'es pas la fondatrice.");
+        _;
+    }
+
+    function rejoindreLeProjet() public {
+        membres[msg.sender] = true;
+        emit NouvelleAdhesion(msg.sender);
+    }
+
+    function miseAJourManifeste(string memory _nouveau) public seulementFondatrice {
+        manifeste = _nouveau;
+        emit MiseAJourManifeste(_nouveau);
+    }
+
+    function verifierMembre(address _membre) public view returns (bool) {
+        return membres[_membre];
+    }
+}
