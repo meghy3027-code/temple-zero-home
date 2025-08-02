@@ -101,3 +101,48 @@
   </footer>
 </body>
 </html>
+:root {
+  --color-primaire: #6A0DAD;      /* Violet sacré */
+  --color-secondaire: #557A46;    /* Vert sauge nature */
+  --color-accent: #FFD700;        /* Or lumière */
+  --color-fond-clair: #FFF4E0;    /* Ivoire doux */
+  --color-texte: #1C1C1C;         /* Texte nuit douce */
+}
+
+body {
+  background-color: var(--color-fond-clair);
+  color: var(--color-texte);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-primaire);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: var(--color-texte);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  background-color: var(--color-secondaire);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
