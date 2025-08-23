@@ -1,5 +1,44 @@
-git add index.html
-git commit -m "Homepage v2: manifeste + Netlify Forms + journal"
-git push
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Temple.Zero — Maison sur la blockchain</title>
+    <meta name="description" content="Temple.Zero : sanctuaire vivant, Web3, éducation par la nature, transparence on-chain." />
 
+    <!-- (Optionnel) Tailwind CDN pour styliser vite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
+  <body class="min-h-screen bg-white text-gray-900">
+    <header class="max-w-3xl mx-auto p-6">
+      <h1 class="text-3xl font-bold">Temple.Zero</h1>
+      <p class="text-sm text-gray-600">Maison sur la blockchain • Mont-Laurier</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto p-6 space-y-6">
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold">Manifeste</h2>
+        <p>Un lieu vivant, transparent et co-créatif. Web3 pour ancrer nos engagements humains et nos créations.</p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold">Liens</h2>
+        <ul class="list-disc pl-6">
+          <li><a class="underline" href="https://base.org" target="_blank" rel="noreferrer">Base</a></li>
+          <li><a class="underline" href="https://zora.co" target="_blank" rel="noreferrer">Zora</a></li>
+          <li><a class="underline" href="mailto:contact@temple.zero">contact@temple.zero</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="max-w-3xl mx-auto p-6 text-sm text-gray-500">
+      © <span id="y"></span> Temple.Zero — Tous droits réservés
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+    <!-- Vercel Speed Insights pour site statique -->
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </body>
+</html>
