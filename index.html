@@ -5,65 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Temple.Zero — Maison vivante sur la blockchain</title>
   <meta name="description" content="Temple.Zero : la maison vivante sur la blockchain Base. Token MEGH, manifeste, liens officiels et suivi de performance." />
+  <!-- Open Graph (optionnel, aide le partage social) -->
+  <meta property="og:title" content="Temple.Zero — Maison vivante sur la blockchain" />
+  <meta property="og:description" content="MEGH, blason, prix en direct et liens officiels." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/blason.png" />
   <!-- Tailwind (CDN) pour styliser vite -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900">
-  <!-- Header -->
   <!-- Bannière Temple.Zero -->
-<section class="relative w-full h-[400px] bg-gray-900 flex items-center justify-center">
-  <img src="/blason.png" 
-       alt="Blason Temple.Zero"
-       class="h-full object-contain drop-shadow-2xl" />
-  <h1 class="absolute bottom-6 text-3xl md:text-5xl font-bold text-white bg-black/50 px-6 py-2 rounded-xl">
-    Temple.Zero — Maison vivante
-  </h1>
-</section>
+  <section class="relative w-full h-[400px] bg-gray-900 flex items-center justify-center">
+    <!-- Remplace /blason.png par le vrai chemin de ton image -->
+    <img src="/blason.png" alt="Blason Temple.Zero" class="h-full object-contain drop-shadow-2xl" loading="lazy" />
+    <h1 class="absolute bottom-6 text-3xl md:text-5xl font-bold text-white bg-black/50 px-6 py-2 rounded-xl">
+      Temple.Zero — Maison vivante
+    </h1>
+  </section>
 
+  <!-- Header -->
   <header class="max-w-3xl mx-auto px-6 py-8">
     <div class="flex items-center gap-3">
-      <div class="w-12 h-12 rounded-full bg-black text-white grid place-items-center text-xl">⛩️</div>
+      <div class="w-12 h-12 rounded-full bg-black text-white grid place-items-center text-xl" aria-hidden="true">⛩️</div>
       <div>
-        <h1 class="text-2xl font-bold">Temple.Zero</h1>
+        <h2 class="text-2xl font-bold">Temple.Zero</h2>
         <p class="text-sm text-gray-600">Maison vivante sur la blockchain • Mont-Laurier</p>
       </div>
     </div>
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-16 space-y-10">
-    <!-- Hero / Blason -->
+    <!-- Blason & Manifeste -->
     <section class="rounded-2xl border p-6">
-      <h2 class="text-xl font-semibold mb-2">Blason & Manifeste</h2>
+      <h3 class="text-xl font-semibold mb-2">Blason & Manifeste</h3>
       <p class="text-gray-700">
         Temple.Zero est un sanctuaire vivant. Le token <span class="font-semibold">MEGH</span> incarne nos battements — un marqueur de présence, de soins et de création.
       </p>
-      <!-- Remplace l'image ci-dessous par ton blason (ex: /blason.png) -->
       <div class="mt-4 aspect-[16/9] w-full rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-gray-500">
-        <span>Blason Temple.Zero (remplace cette zone par ton image)</span>
+        <span>Astuce : remplace /blason.png pour afficher ton vrai blason ici ↑</span>
       </div>
     </section>
 
-    <!-- Boutons d'action -->
+    <!-- Actions -->
     <section class="rounded-2xl border p-6">
       <h3 class="text-lg font-semibold mb-3">Actions</h3>
       <div class="flex flex-wrap gap-3">
         <!-- Achat MEGH (Uniswap / Base) -->
         <a href="https://app.uniswap.org/swap?outputCurrency=0x957c66e03d8f41ae8199f612c276a22fca584fd6&chain=base"
-           target="_blank"
+           target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow">
           🌱 Acheter MEGH (Uniswap • Base)
         </a>
 
         <!-- Voir le token sur BaseScan -->
         <a href="https://basescan.org/token/0x957c66e03d8f41ae8199f612c276a22fca584fd6"
-           target="_blank"
+           target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg shadow">
           🔍 Voir MEGH sur BaseScan
         </a>
 
         <!-- Profil Zora -->
         <a href="https://zora.co/@meghy"
-           target="_blank"
+           target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg shadow">
           🎨 Profil Zora (@meghy)
         </a>
@@ -88,6 +91,59 @@
       </p>
     </section>
 
+    <!-- Prix & Swaps (GeckoTerminal) -->
+    <section class="rounded-2xl border p-6">
+      <h3 class="text-lg font-semibold mb-4">Prix &amp; Swaps (en direct)</h3>
+      <div class="w-full h-[600px]">
+        <iframe
+          id="geckoterminal-embed"
+          title="GeckoTerminal — Pool MEGH"
+          src="https://www.geckoterminal.com/base/pools/0x603edfc283ea2207ffc84fbf42baa6be82e5164b812279ccdfd846d1e7794962?embed=1&info=1&swaps=1&grayscale=0&light_chart=0&chart_type=price&resolution=15m"
+          frameborder="0"
+          allow="clipboard-write"
+          allowfullscreen
+          class="w-full h-full rounded-xl shadow">
+        </iframe>
+      </div>
+      <div class="mt-3">
+        <a href="https://www.geckoterminal.com/base/pools/0x603edfc283ea2207ffc84fbf42baa6be82e5164b812279ccdfd846d1e7794962"
+           target="_blank" rel="noopener noreferrer"
+           class="text-sm underline text-gray-600 hover:text-gray-800">
+          Ouvrir sur GeckoTerminal ↗
+        </a>
+      </div>
+    </section>
+
     <!-- Rituel 11h30 → midi -->
     <section class="rounded-2xl border p-6">
-      <h3 class="text-lg font-semibold mb-2">Rituel 11h30 →
+      <h3 class="text-lg font-semibold mb-2">Rituel 11h30 → midi</h3>
+      <ol class="list-decimal pl-5 space-y-1 text-gray-700">
+        <li>Un mot du jour (harmonie, ancrage, etc.).</li>
+        <li>Ouvrir “Acheter MEGH” et vérifier la pool (volume/prix).</li>
+        <li>Publier un micro-post avec le lien et ton mot du jour.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="max-w-3xl mx-auto px-6 pb-12 text-sm text-gray-500">
+    © <span id="year"></span> Temple.Zero — Tous droits réservés
+  </footer>
+
+  <script>
+    // Année dynamique + copier adresses
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const copy = (id) => {
+      const el = document.getElementById(id);
+      navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+        alert('Copié : ' + el.textContent.trim());
+      });
+    };
+    document.getElementById('copyToken').onclick = () => copy('tokenAddr');
+    document.getElementById('copyWallet').onclick = () => copy('walletAddr');
+  </script>
+
+  <!-- Vercel Speed Insights (statique) -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <noscript>Active JavaScript pour voir le graphique et le suivi de performance.</noscript>
+</body>
+</html>
