@@ -1,54 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Temple.Zero — Maison sur la blockchain</title>
-    <meta name="description" content="Temple.Zero : sanctuaire vivant, Web3, éducation par la nature, transparence on-chain." />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple.Zero DAO — NFT Constitution</title>
+  <meta name="description" content="Mint du NFT Constitution de Temple.Zero DAO : devenez gardien·ne d’un sanctuaire vivant. Accès à l’Académie Gateway. Prix 10–30 USDC/ETH (Base)." />
+  <meta property="og:title" content="Temple.Zero DAO — NFT Constitution" />
+  <meta property="og:description" content="Mint du NFT Constitution : devenez gardien·ne d’un sanctuaire vivant. Accès à l’Académie Gateway. Prix 10–30 USDC/ETH (Base)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="theme-color" content="#0b1020" />
 
-    <!-- (Optionnel) Tailwind CDN pour styliser vite -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-<a href="https://app.uniswap.org/explore/tokens/base/ADRESSE_DE_TA_POOL"
-   target="_blank"
-   class="bg-purple-600 text-white px-4 py-2 rounded">
-   🌱 Acheter MEGH sur Uniswap (Base)
-</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind runtime config (optional fine-tuning)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          colors: {
+            basebg: "#0b1020",
+            accent: "#9AE6B4",
+            soft: "#CBD5E1",
+          },
+          boxShadow: {
+            glow: "0 0 20px rgba(154, 230, 180, 0.25)",
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html, body { height: 100%; }
+    .grid-bg {
+      background: radial-gradient(1000px 600px at 10% -10%, rgba(154,230,180,.08), transparent),
+                  radial-gradient(800px 600px at 90% 10%, rgba(56,189,248,.08), transparent),
+                  linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+    }
+  </style>
+</head>
+<body class="bg-basebg text-white font-sans selection:bg-accent/30">
+  <!-- Topbar -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-basebg/70 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-300"></span>
+        <span class="text-sm tracking-widest uppercase text-soft">Temple.Zero</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-soft">
+        <a href="#about" class="hover:text-white">À propos</a>
+        <a href="#how" class="hover:text-white">Comment ça marche</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+      <a id="ctaTop" href="#mint" class="text-sm px-4 py-2 rounded-xl bg-white text-black font-semibold shadow-glow hover:opacity-90">Mint maintenant</a>
+    </div>
+  </header>
 
-  <body class="min-h-screen bg-white text-gray-900">
-    <header class="max-w-3xl mx-auto p-6">
-      <h1 class="text-3xl font-bold">Temple.Zero</h1>
-      <p class="text-sm text-gray-600">Maison sur la blockchain • Mont-Laurier</p>
-    </header>
+  <!-- Hero -->
+  <section class="grid-bg">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-emerald-300/90 text-xs uppercase tracking-[0.25em] mb-3">Constitution • NFT Fondateur</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Temple.Zero DAO<br/><span class="text-emerald-300">NFT Constitution</span></h1>
+        <p class="mt-5 text-soft/90 leading-relaxed max-w-prose">Devenez gardien·ne d’un sanctuaire vivant dans les Laurentides. Ce <strong>Gateway NFT</strong> (Terre, Eau, Air, Feu, Aura) offre l’accès à l’Académie Gateway : savoirs vibratoires, ateliers nature, et plus. Chaque mint soutient la maison‑sanctuaire, l’éducation et l’héritage d’Emma.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a id="ctaHero" href="#mint" class="px-5 py-3 rounded-2xl bg-white text-black font-semibold shadow-glow hover:opacity-90">Mint maintenant</a>
+          <a id="viewContract" href="#" class="px-5 py-3 rounded-2xl border border-white/15 hover:border-white/30 text-soft">Voir sur BaseScan</a>
+        </div>
+        <p class="mt-3 text-xs text-soft">💜 Prix conseillé : 10–30 USDC/ETH sur Base. Frais minimes.</p>
+      </div>
+      <div>
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-xl">
+          <img id="heroImg" src="https://images.unsplash.com/photo-1535073880113-3b1a17bbf36e?q=80&w=1600&auto=format&fit=crop" alt="Fractal / Aura — Temple.Zero" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-basebg/40 to-transparent"></div>
+          <div class="absolute bottom-3 right-3 text-[10px] text-white/60 bg-black/30 backdrop-blur px-2 py-1 rounded">Illustration de démonstration</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main class="max-w-3xl mx-auto p-6 space-y-6">
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold">Manifeste</h2>
-        <p>Un lieu vivant, transparent et co-créatif. Web3 pour ancrer nos engagements humains et nos créations.</p>
-      </section>
+  <!-- About -->
+  <section id="about" class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-1">
+        <h2 class="text-2xl font-bold">Pourquoi minter ?</h2>
+        <p class="text-soft mt-2">Trois raisons simples et humaines.</p>
+      </div>
+      <div class="md:col-span-2 grid sm:grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+          <h3 class="font-semibold">Protéger la Maison</h3>
+          <p class="text-soft text-sm mt-1">Chaque mint soutient l’entretien et la pérennité du sanctuaire à Mont‑Laurier.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+          <h3 class="font-semibold">Accès Académie Gateway</h3>
+          <p class="text-soft text-sm mt-1">Savoirs vibratoires, ateliers nature, et contenus guidés par les 4 éléments.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+          <h3 class="font-semibold">Héritage d’Emma</h3>
+          <p class="text-soft text-sm mt-1">Preuve on‑chain et transmission d’un projet vivant aux générations futures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold">Liens</h2>
-        <ul class="list-disc pl-6">
-          <li><a class="underline" href="https://base.org" target="_blank" rel="noreferrer">Base</a></li>
-          <li><a class="underline" href="https://zora.co" target="_blank" rel="noreferrer">Zora</a></li>
-          <li><a class="underline" href="mailto:contact@temple.zero">contact@temple.zero</a></li>
-        </ul>
-      </section>
-    </main>
+  <!-- How it works -->
+  <section id="how" class="border-t border-white/5 bg-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-2xl font-bold">Comment ça marche</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-4">
+        <div class="p-4 rounded-2xl border border-white/10 bg-basebg">
+          <p class="text-xs text-soft">Étape 1</p>
+          <h3 class="font-semibold">Connecte ton wallet</h3>
+          <p class="text-soft text-sm mt-1">MetaMask / Coinbase Wallet sur Base.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-white/10 bg-basebg">
+          <p class="text-xs text-soft">Étape 2</p>
+          <h3 class="font-semibold">Mint le NFT</h3>
+          <p class="text-soft text-sm mt-1">Clique « Mint maintenant » et signe.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-white/10 bg-basebg">
+          <p class="text-xs text-soft">Étape 3</p>
+          <h3 class="font-semibold">Accède à l’Académie</h3>
+          <p class="text-soft text-sm mt-1">Le NFT agit comme Gateway d’accès.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-white/10 bg-basebg">
+          <p class="text-xs text-soft">Étape 4</p>
+          <h3 class="font-semibold">Participe à la DAO</h3>
+          <p class="text-soft text-sm mt-1">Votes (Snapshot) & cercles des 4 éléments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="max-w-3xl mx-auto p-6 text-sm text-gray-500">
-      © <span id="y"></span> Temple.Zero — Tous droits réservés
-    </footer>
+  <!-- Mint block -->
+  <section id="mint" class="border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+      <h2 class="text-3xl font-extrabold">Prêt·e à devenir gardien·ne ?</h2>
+      <p class="text-soft mt-3">Mint du NFT Constitution maintenant. Prix 10–30 USDC/ETH (Base).</p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <a id="ctaMint" href="#" class="px-6 py-3 rounded-2xl bg-white text-black font-semibold shadow-glow hover:opacity-90">Mint maintenant</a>
+        <a id="ctaZora" href="#" class="px-6 py-3 rounded-2xl border border-white/15 hover:border-white/30 text-soft">Ouvrir dans Zora</a>
+      </div>
+      <p class="text-[11px] text-soft mt-3">Besoin d’ETH/USDC sur Base ? Utilise un bridge ou l’achat direct via ton wallet.</p>
 
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+      <!-- Optional embed placeholder (replace with Zora/Manifold/Thirdweb widget) -->
+      <div class="mt-8 p-4 rounded-2xl border border-white/10 bg-white/5 text-left">
+        <p class="text-xs text-soft">Intégration widget (optionnelle)</p>
+        <p class="text-sm mt-1 text-soft">Colle ici le code d’embed du widget de mint Zora/Manifold si tu en as un. Ce bloc est prévu pour ça.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Vercel Speed Insights pour site statique -->
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-  </body>
+  <!-- FAQ -->
+  <section id="faq" class="border-t border-white/5 bg-white/5">
+    <div class="max-w-4xl mx-auto px-4 py-16">
+      <h2 class="text-2xl font-bold">FAQ</h2>
+      <div class="mt-6 grid gap-4">
+        <details class="group p-4 rounded-2xl border border-white/10 bg-basebg">
+          <summary class="font-semibold cursor-pointer marker:hidden flex items-center justify-between">Qu’est‑ce que j’obtiens avec ce NFT ? <span class="text-soft group-open:rotate-180 transition">⌄</span></summary>
+          <p class="text-soft mt-2 text-sm">Un NFT fondateur (Constitution), un accès Gateway à l’Académie, et la preuve on‑chain de ton soutien au sanctuaire Temple.Zero.</p>
+        </details>
+        <details class="group p-4 rounded-2xl border border-white/10 bg-basebg">
+          <summary class="font-semibold cursor-pointer marker:hidden flex items-center justify-between">Sur quelle chaîne ? <span class="text-soft group-open:rotate-180 transition">⌄</span></summary>
+          <p class="text-soft mt-2 text-sm">Base (réseau L2 Ethereum). Frais très bas.</p>
+        </details>
+        <details class="group p-4 rounded-2xl border border-white/10 bg-basebg">
+          <summary class="font-semibold cursor-pointer marker:hidden flex items-center justify-between">Puis‑je payer en USDC ? <span class="text-soft group-open:rotate-180 transition">⌄</span></summary>
+          <p class="text-soft mt-2 text-sm">Oui, selon le widget/plateforme utilisée (Zora, Manifold, Thirdweb). Sinon, échange USDC→ETH sur Base puis mint.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-soft">
+      <p>© <span id="year"></span> Temple.Zero DAO — Tous droits réservés.</p>
+      <div class="flex items-center gap-4">
+        <a id="opensea" href="#" class="hover:text-white">OpenSea</a>
+        <a id="zora" href="#" class="hover:text-white">Zora</a>
+        <a id="twitter" href="#" class="hover:text-white">X/Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ✅ Personnalisation rapide : remplace ces valeurs
+    const MINT_URL   = "https://zora.co/collect/base:CONTRACT_OR_DROP"; // lien direct de mint
+    const ZORA_URL   = "https://zora.co/collections/base/CONTRACT";     // page collection
+    const OPENSEA_URL= "https://opensea.io/assets/base/CONTRACT/1";      // exemple asset
+    const CONTRACT_URL = "https://basescan.org/address/CONTRACT";        // explorer
+    const HERO_IMG  = "https://images.unsplash.com/photo-1535073880113-3b1a17bbf36e?q=80&w=1600&auto=format&fit=crop"; // remplace par ton image
+
+    // Applique dans la page
+    document.getElementById('ctaTop').href = MINT_URL;
+    document.getElementById('ctaHero').href = MINT_URL;
+    document.getElementById('ctaMint').href = MINT_URL;
+    document.getElementById('ctaZora').href = ZORA_URL;
+    document.getElementById('viewContract').href = CONTRACT_URL;
+    document.getElementById('opensea').href = OPENSEA_URL;
+    document.getElementById('zora').href = ZORA_URL;
+    document.getElementById('heroImg').src = HERO_IMG;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // (Optionnel) Tracking simple d’événements CTA (console)
+    ["ctaTop","ctaHero","ctaMint","ctaZora"].forEach(id=>{
+      const el = document.getElementById(id);
+      el && el.addEventListener('click', ()=> console.log(`[CTA] ${id} clicked`));
+    });
+  </script>
+</body>
 </html>
-<a href="https://basescan.org/token/ADRESSE_DU_CONTRAT" 
-   target="_blank" 
-   class="inline-block bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700">
-   🌞 Voir le Token Temple.Zero
-</a>
+
